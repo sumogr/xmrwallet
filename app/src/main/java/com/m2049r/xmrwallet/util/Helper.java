@@ -84,10 +84,10 @@ public class Helper {
 
     static public final String NOCRAZYPASS_FLAGFILE = ".nocrazypass";
 
-    static public final String BASE_CRYPTO = "XMR";
+    static public final String BASE_CRYPTO = "SUMO";
 
-    static private final String WALLET_DIR = "monerujo" + FLAVOR_SUFFIX;
-    static private final String HOME_DIR = "monero" + FLAVOR_SUFFIX;
+    static private final String WALLET_DIR = "sumowallet" + FLAVOR_SUFFIX;
+    static private final String HOME_DIR = "sumokoin" + FLAVOR_SUFFIX;
 
     static public int DISPLAY_DIGITS_INFO = 5;
 
@@ -188,7 +188,7 @@ public class Helper {
     }
 
     static public BigDecimal getDecimalAmount(long amount) {
-        return new BigDecimal(amount).scaleByPowerOfTen(-12);
+        return new BigDecimal(amount).scaleByPowerOfTen(-9);
     }
 
     static public String getDisplayAmount(long amount) {
@@ -366,7 +366,7 @@ public class Helper {
     // TODO make the log levels refer to the  WalletManagerFactory::LogLevel enum ?
     static public void initLogger(Context context, int level) {
         String home = getStorage(context, HOME_DIR).getAbsolutePath();
-        WalletManager.initLogger(home + "/monerujo", "monerujo.log");
+        WalletManager.initLogger(home + "/sumowallet", "sumowallet.log");
         if (level >= WalletManager.LOGLEVEL_SILENT)
             WalletManager.setLogLevel(level);
     }

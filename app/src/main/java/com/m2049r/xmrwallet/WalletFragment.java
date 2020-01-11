@@ -304,7 +304,7 @@ public class WalletFragment extends Fragment
     public void exchange(final ExchangeRate exchangeRate) {
         hideExchanging();
         if (!Helper.BASE_CRYPTO.equals(exchangeRate.getBaseCurrency())) {
-            Timber.e("Not XMR");
+            Timber.e("Not SUMO");
             sCurrency.setSelection(0, true);
             balanceCurrency = Helper.BASE_CRYPTO;
             balanceRate = 1.0;

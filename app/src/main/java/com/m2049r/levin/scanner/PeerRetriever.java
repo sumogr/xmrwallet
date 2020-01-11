@@ -207,7 +207,7 @@ public class PeerRetriever implements Callable<PeerRetriever> {
         Section nodeData = new Section();
         nodeData.add("local_time", (new Date()).getTime());
         nodeData.add("my_port", 0);
-        byte[] networkId = Helper.hexToBytes("1230f171610441611731008216a1a110"); // mainnet
+        byte[] networkId = Helper.hexToBytes("0406dfcefc7c274a24d4f38d424460a8"); // mainnet
         nodeData.add("network_id", networkId);
         nodeData.add("peer_id", PEER_ID);
         section.add("node_data", nodeData);
@@ -216,7 +216,7 @@ public class PeerRetriever implements Callable<PeerRetriever> {
         payloadData.add("cumulative_difficulty", 1L);
         payloadData.add("current_height", 1L);
         byte[] genesisHash =
-                Helper.hexToBytes("418015bb9ae982a1975da7d79277c2705727a56894ba0fb246adaabb1f4632e3");
+                Helper.hexToBytes("6eb04b6b8c68049a76206fe2805ede5f7465c03b7112850d3262a067b9914dac");
         payloadData.add("top_id", genesisHash);
         payloadData.add("top_version", (byte) 1);
         section.add("payload_data", payloadData);

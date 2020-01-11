@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
-    <string name="app_name" translatable="false">monerujo</string>
+    <string name="app_name" translatable="false">sumowallet</string>
     <string name="wallet_activity_name">Wallet</string>
 
     <string name="menu_about">About</string>
@@ -193,7 +193,7 @@
     <string name="generate_wallet_creating">Creating wallet</string>
     <string name="generate_wallet_created">Wallet created</string>
 
-    <string name="generate_restoreheight_error">Enter Number or Date (YYYY-MM-DD)</string>
+    <string name="generate_restoreheight_error">Enter Number or Date (YYYY-MM)</string>
 
     <string name="generate_wallet_type_key">Keys</string>
     <string name="generate_wallet_type_new">New</string>
@@ -205,7 +205,7 @@
     <string name="generate_viewkey_hint">View Key</string>
     <string name="generate_spendkey_hint">Spend Key</string>
     <string name="generate_mnemonic_hint">25-Word Mnemonic Seed</string>
-    <string name="generate_restoreheight_hint">Restore Height or Date (YYYY-MM-DD)</string>
+    <string name="generate_restoreheight_hint">Restore Height or Date (YYYY-MM)</string>
 
     <string name="generate_address_label">Public Address</string>
     <string name="generate_viewkey_label">View Key</string>
@@ -215,7 +215,7 @@
 
     <string name="generate_check_key">Enter valid Key</string>
     <string name="generate_check_address">Enter valid Address</string>
-    <string name="generate_check_mnemonic">Enter your 25 word seed</string>
+    <string name="generate_check_mnemonic">Enter your 26 word seed</string>
 
     <string name="send_amount_btc_xmr">%1$s (indicative)</string>
 
@@ -348,6 +348,7 @@
     <string name="send_sweepall">Send all confirmed funds in this account!</string>
     <string name="tx_subaddress">Subaddress #%1$d</string>
     <string name="generate_address_label_sub">Public Subaddress #%1$d</string>
+    <string name="default_restore_height">2020-01</string>
 
     <string name="menu_language">Language</string>
     <string name="language_system_default">Use System Language</string>

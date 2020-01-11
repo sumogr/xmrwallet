@@ -62,7 +62,7 @@ public class SendFragment extends Fragment
         SendSuccessWizardFragment.Listener,
         OnBackPressedListener, OnUriScannedListener {
 
-    final static public int MIXIN = 10;
+    final static public int MIXIN = 48;
 
     private Listener activityCallback;
 

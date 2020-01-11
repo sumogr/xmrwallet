@@ -32,12 +32,12 @@ import timber.log.Timber;
 
 public class BarcodeData {
 
-    public static final String XMR_SCHEME = "monero:";
+    public static final String XMR_SCHEME = "sumokoin:";
     public static final String XMR_PAYMENTID = "tx_payment_id";
     public static final String XMR_AMOUNT = "tx_amount";
     public static final String XMR_DESCRIPTION = "tx_description";
 
-    public static final String OA_XMR_ASSET = "xmr";
+    public static final String OA_XMR_ASSET = "sumo";
     public static final String OA_BTC_ASSET = "btc";
 
     static final String BTC_SCHEME = "bitcoin";
@@ -100,7 +100,7 @@ public class BarcodeData {
     }
 
     public String getUriString() {
-        if (asset != Asset.XMR) throw new IllegalStateException("We can only do XMR stuff!");
+        if (asset != Asset.XMR) throw new IllegalStateException("We can only do SUMO stuff!");
         StringBuilder sb = new StringBuilder();
         sb.append(BarcodeData.XMR_SCHEME).append(address);
         boolean first = true;

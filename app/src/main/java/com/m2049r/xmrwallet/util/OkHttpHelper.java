@@ -56,7 +56,7 @@ public class OkHttpHelper {
         return EagerSingleton;
     }
 
-    static final public String USER_AGENT = "Monerujo/1.0";
+    static final public String USER_AGENT = "Sumowallet/1.0";
 
     static public Request getPostRequest(HttpUrl url, RequestBody requestBody) {
         return new Request.Builder().url(url).post(requestBody)

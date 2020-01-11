@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import timber.log.Timber;
 
 public class RestoreHeight {
     static private RestoreHeight Singleton = null;
@@ -42,140 +43,70 @@ public class RestoreHeight {
     private Map<String, Long> blockheight = new HashMap<>();
 
     RestoreHeight() {
-        blockheight.put("2014-05-01", 18844L);
-        blockheight.put("2014-06-01", 65406L);
-        blockheight.put("2014-07-01", 108882L);
-        blockheight.put("2014-08-01", 153594L);
-        blockheight.put("2014-09-01", 198072L);
-        blockheight.put("2014-10-01", 241088L);
-        blockheight.put("2014-11-01", 285305L);
-        blockheight.put("2014-12-01", 328069L);
-        blockheight.put("2015-01-01", 372369L);
-        blockheight.put("2015-02-01", 416505L);
-        blockheight.put("2015-03-01", 456631L);
-        blockheight.put("2015-04-01", 501084L);
-        blockheight.put("2015-05-01", 543973L);
-        blockheight.put("2015-06-01", 588326L);
-        blockheight.put("2015-07-01", 631187L);
-        blockheight.put("2015-08-01", 675484L);
-        blockheight.put("2015-09-01", 719725L);
-        blockheight.put("2015-10-01", 762463L);
-        blockheight.put("2015-11-01", 806528L);
-        blockheight.put("2015-12-01", 849041L);
-        blockheight.put("2016-01-01", 892866L);
-        blockheight.put("2016-02-01", 936736L);
-        blockheight.put("2016-03-01", 977691L);
-        blockheight.put("2016-04-01", 1015848L);
-        blockheight.put("2016-05-01", 1037417L);
-        blockheight.put("2016-06-01", 1059651L);
-        blockheight.put("2016-07-01", 1081269L);
-        blockheight.put("2016-08-01", 1103630L);
-        blockheight.put("2016-09-01", 1125983L);
-        blockheight.put("2016-10-01", 1147617L);
-        blockheight.put("2016-11-01", 1169779L);
-        blockheight.put("2016-12-01", 1191402L);
-        blockheight.put("2017-01-01", 1213861L);
-        blockheight.put("2017-02-01", 1236197L);
-        blockheight.put("2017-03-01", 1256358L);
-        blockheight.put("2017-04-01", 1278622L);
-        blockheight.put("2017-05-01", 1300239L);
-        blockheight.put("2017-06-01", 1322564L);
-        blockheight.put("2017-07-01", 1344225L);
-        blockheight.put("2017-08-01", 1366664L);
-        blockheight.put("2017-09-01", 1389113L);
-        blockheight.put("2017-10-01", 1410738L);
-        blockheight.put("2017-11-01", 1433039L);
-        blockheight.put("2017-12-01", 1454639L);
-        blockheight.put("2018-01-01", 1477201L);
-        blockheight.put("2018-02-01", 1499599L);
-        blockheight.put("2018-03-01", 1519796L);
-        blockheight.put("2018-04-01", 1542067L);
-        blockheight.put("2018-05-01", 1562861L);
-        blockheight.put("2018-06-01", 1585135L);
-        blockheight.put("2018-07-01", 1606715L);
-        blockheight.put("2018-08-01", 1629017L);
-        blockheight.put("2018-09-01", 1651347L);
-        blockheight.put("2018-10-01", 1673031L);
-        blockheight.put("2018-11-01", 1695128L);
-        blockheight.put("2018-12-01", 1716687L);
-        blockheight.put("2019-01-01", 1738923L);
-        blockheight.put("2019-02-01", 1761435L);
-        blockheight.put("2019-03-01", 1781681L);
-        blockheight.put("2019-04-01", 1803081L);
-        blockheight.put("2019-05-01", 1824671L);
-        blockheight.put("2019-06-01", 1847005L);
-        blockheight.put("2019-07-01", 1868590L);
-        blockheight.put("2019-08-01", 1890878L);
-        blockheight.put("2019-09-01", 1913201L);
-        blockheight.put("2019-10-01", 1934732L);
-        blockheight.put("2019-11-01", 1957051L);
+        blockheight.put("2017-05", 6000L);
+        blockheight.put("2017-06", 17000L);
+        blockheight.put("2017-07", 24000L);
+        blockheight.put("2017-08", 35000L);
+        blockheight.put("2017-09", 45000L);
+        blockheight.put("2017-10", 55000L);
+        blockheight.put("2017-11", 66000L);
+        blockheight.put("2017-12", 76000L);
+        blockheight.put("2018-01", 87000L);
+        blockheight.put("2018-02", 98000L);
+        blockheight.put("2018-03", 107000L);
+        blockheight.put("2018-04", 116000L);
+        blockheight.put("2018-05", 126000L);
+        blockheight.put("2018-06", 137000L);
+        blockheight.put("2018-07", 169000L);
+        blockheight.put("2018-08", 180000L);
+        blockheight.put("2018-09", 191000L);
+        blockheight.put("2018-10", 202000L);
+        blockheight.put("2018-11", 213000L);
+        blockheight.put("2018-12", 223000L);
+        blockheight.put("2019-01", 235000L);
+        blockheight.put("2019-02", 246000L);
+        blockheight.put("2019-03", 256000L);
+        blockheight.put("2019-04", 267000L);
+        blockheight.put("2019-05", 278000L);
+        blockheight.put("2019-06", 289000L);
+        blockheight.put("2019-07", 300000L);
+        blockheight.put("2019-08", 311000L);
+        blockheight.put("2019-09", 322000L);
+        blockheight.put("2019-10", 333000L);
+        blockheight.put("2019-11", 344000L);
+        blockheight.put("2019-12", 355000L);
+        blockheight.put("2020-01", 366000L);
     }
 
-    public long getHeight(String date) {
-        SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
-        parser.setTimeZone(TimeZone.getTimeZone("UTC"));
-        parser.setLenient(false);
-        try {
-            return getHeight(parser.parse(date));
-        } catch (ParseException ex) {
-            throw new IllegalArgumentException(ex);
-        }
-    }
+    long latestHeight = 366000L;
 
     public long getHeight(final Date date) {
-        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        cal.set(Calendar.DST_OFFSET, 0);
+        Timber.d("Restore Height date %s", date);
+
+        Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        cal.add(Calendar.DAY_OF_MONTH, -4); // give it some leeway
-        if (cal.get(Calendar.YEAR) < 2014)
+        Timber.d("Restore Height cal %s", cal);
+
+        if (cal.get(Calendar.YEAR) < 2017)
             return 0;
-        if ((cal.get(Calendar.YEAR) == 2014) && (cal.get(Calendar.MONTH) <= 3))
-            // before May 2014
+        // Month is 0 based
+        // https://stackoverflow.com/a/7183009
+        if ((cal.get(Calendar.YEAR) == 2018) && ((cal.get(Calendar.MONTH) + 1) <= 3))
+            // before Apr 2017
             return 0;
 
-        Calendar query = (Calendar) cal.clone();
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM");
 
         String queryDate = formatter.format(date);
+        Timber.d("String query date %s", queryDate);
 
-        cal.set(Calendar.DAY_OF_MONTH, 1);
-        long prevTime = cal.getTimeInMillis();
-        String prevDate = formatter.format(prevTime);
-        // lookup blockheight at first of the month
-        Long prevBc = blockheight.get(prevDate);
-        if (prevBc == null) {
-            // if too recent, go back in time and find latest one we have
-            while (prevBc == null) {
-                cal.add(Calendar.MONTH, -1);
-                if (cal.get(Calendar.YEAR) < 2014) {
-                    throw new IllegalStateException("endless loop looking for blockheight");
-                }
-                prevTime = cal.getTimeInMillis();
-                prevDate = formatter.format(prevTime);
-                prevBc = blockheight.get(prevDate);
-            }
-        }
-        long height = prevBc;
-        // now we have a blockheight & a date ON or BEFORE the restore date requested
-        if (queryDate.equals(prevDate)) return height;
-        // see if we have a blockheight after this date
-        cal.add(Calendar.MONTH, 1);
-        long nextTime = cal.getTimeInMillis();
-        String nextDate = formatter.format(nextTime);
-        Long nextBc = blockheight.get(nextDate);
-        if (nextBc != null) { // we have a range - interpolate the blockheight we are looking for
-            long diff = nextBc - prevBc;
-            long diffDays = TimeUnit.DAYS.convert(nextTime - prevTime, TimeUnit.MILLISECONDS);
-            long days = TimeUnit.DAYS.convert(query.getTimeInMillis() - prevTime,
-                    TimeUnit.MILLISECONDS);
-            height = Math.round(prevBc + diff * (1.0 * days / diffDays));
+        long height = 0;
+        if (blockheight.get(queryDate) == null) {
+            height = latestHeight;
         } else {
-            long days = TimeUnit.DAYS.convert(query.getTimeInMillis() - prevTime,
-                    TimeUnit.MILLISECONDS);
-            height = Math.round(prevBc + 1.0 * days * (24 * 60 / 2));
+            height = blockheight.get(queryDate);
         }
+
         return height;
     }
 }

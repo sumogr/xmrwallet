@@ -56,11 +56,11 @@ public class WalletManager {
     static public String addressPrefix(NetworkType networkType) {
         switch (networkType) {
             case NetworkType_Testnet:
-                return "9A-";
+                return "Suto-";
             case NetworkType_Mainnet:
-                return "4-";
+                return "Sumo-";
             case NetworkType_Stagenet:
-                return "5-";
+                return "Suso-";
             default:
                 throw new IllegalStateException("Unsupported Network: " + networkType);
         }

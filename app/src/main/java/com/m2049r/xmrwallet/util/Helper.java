@@ -211,7 +211,8 @@ public class Helper {
         String displayB;
         if (isCrypto) {
             if ((amount >= 0) || (amount == 0)) {
-                displayB = String.format(Locale.US, "%,.5f", amount);
+                String displayFormat = String.format(Locale.US, "%%,.%1df", DISPLAY_DIGITS_INFO);
+                displayB = String.format(Locale.US, displayFormat, amount);
             } else {
                 displayB = null;
             }

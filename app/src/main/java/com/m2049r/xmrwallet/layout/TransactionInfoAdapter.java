@@ -136,8 +136,9 @@ public class TransactionInfoAdapter extends RecyclerView.Adapter<TransactionInfo
         }
 
         void bind(int position) {
-            this.infoItem = infoItems.get(position);
 
+            UserNotes userNotes = new UserNotes(infoItem.notes);
+            
             String displayAmount = Helper.getDisplayAmount(infoItem.amount, Helper.DISPLAY_DIGITS_INFO);
             if (infoItem.direction == TransactionInfo.Direction.Direction_Out) {
                 tvAmount.setText(context.getString(R.string.tx_list_amount_negative, displayAmount));

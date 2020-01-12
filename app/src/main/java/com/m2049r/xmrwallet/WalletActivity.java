@@ -1032,7 +1032,7 @@ public class WalletActivity extends BaseActivity implements WalletFragment.Liste
         final TextView tvBalance = accountsView.getHeaderView(0).findViewById(R.id.tvBalance);
         if (!isStreetMode()) {
             tvBalance.setText(getString(R.string.accounts_balance,
-                    Helper.getDisplayAmount(getWallet().getBalanceAll(), 5)));
+                    Helper.getDisplayAmount(getWallet().getBalanceAll(), Helper.DISPLAY_DIGITS_INFO)));
         } else {
             tvBalance.setText(null);
         }

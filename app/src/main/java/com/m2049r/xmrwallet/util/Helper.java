@@ -89,7 +89,7 @@ public class Helper {
     static private final String WALLET_DIR = "sumowallet" + FLAVOR_SUFFIX;
     static private final String HOME_DIR = "sumokoin" + FLAVOR_SUFFIX;
 
-    static public int DISPLAY_DIGITS_INFO = 5;
+    static public int DISPLAY_DIGITS_INFO = 4;
 
     static public File getWalletRoot(Context context) {
         return getStorage(context, WALLET_DIR);
